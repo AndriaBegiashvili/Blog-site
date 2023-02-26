@@ -15,17 +15,11 @@ const contactContent = "Please Do Not Contact us";
 const app = express();
 mongoose.connect("mongodb://127.0.0.1/blogDB");
 
-
-
 const postSchema = {
   name:String,
   text:String
 };
 const Post = mongoose.model("Post",postSchema);
-
-
-
-
 
 app.set('view engine', 'ejs');
 
@@ -54,18 +48,6 @@ app.post("/compose",(req,res)=>{
   post.save();
   res.redirect("/")
 });
-
-
-
-
-
-
-
-
-
-
-
-
 app.get("/about",(req,res)=>{
   res.render("about", {aboutContent})
 });
