@@ -3,7 +3,7 @@
 <p><%= homeStartingContent %></p>
 
 
-<%saved.forEach((post) =>{ %>
+<% posts.forEach((post) =>{ %>
  <h1><%=post.name%></h1>
  <p><%=post.text.substring(0,100) + " ..."%> <a href="/<%=post.name%>">Read More</a> </p>
  <%}); %>   
